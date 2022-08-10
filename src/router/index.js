@@ -1,6 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import ResumosView from '../views/ResumosView.vue'
+import AboutView from '../views/AboutView.vue'
+import ResuUmView from '../views/ResuUmView.vue'
+import ResuDoisView from '../views/ResuDoisView.vue'
+import ResuTresView from '../views/ResuTresView.vue'
+import ResuQuatroView from '../views/ResuQuatroView.vue'
+import ResuCincoView from '../views/ResuCincoView.vue'
+import ResuSeisView from '../views/ResuSeisView.vue'
 
 Vue.use(VueRouter)
 
@@ -11,13 +19,45 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    path: '/resumos',
+    name: 'todos-resumos',
+    component: ResumosView
+  },
+  {
+    path: '/sobre',
+    name: 'sobre',
+    component: AboutView
+  },
+  {
+    path: '/sistemas-modulos-node',
+    name: 'resumo-um',
+    component: ResuUmView
+  },
+  {
+    path: '/segundo-resumo',
+    name: 'resumo-dois',
+    component: ResuDoisView
+  },
+  {
+    path: '/terceiro-resumo',
+    name: 'resumo-tres',
+    component: ResuTresView
+  },
+  {
+    path: '/quarto-resumo',
+    name: 'resumo-quatro',
+    component: ResuQuatroView
+  },
+  {
+    path: '/quinto-resumo',
+    name: 'resumo-cinco',
+    component: ResuCincoView
+  },
+  {
+    path: '/sexto-resumo',
+    name: 'resumo-seis',
+    component: ResuSeisView
+  },
 ]
 
 const router = new VueRouter({
