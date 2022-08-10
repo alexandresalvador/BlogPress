@@ -56,7 +56,7 @@
                     podemos procurar por pacotes com base em uma ou mais
                     palavras-chave: <i>"npm search xpto".</i> Para utilizarmos
                     um módulo, precisamos somente de instalar ele em nossa
-                    máquina. Para instalarmos um pacote difitamos
+                    máquina. Para instalarmos um pacote digitamos
                     <b>npm install</b> e depois o nome do pacote. Para
                     instalarmos versões mais recentes de determinado pacote,
                     precisamos especificar um número de versão.
@@ -151,6 +151,239 @@
         exemplo.
       </p>
       <br />
+      <h2>Ligando Pacotes</h2>
+      <p class="text-justify fs-5">
+        Com auxílio do NPM, podemos criar ligações para pacotes locais. Quando
+        fazemos a ligação a um pacote, ele pode ser referenciado como sendo um
+        global, isto é útil para quando estivermos desenvolvendo um módulo e
+        queremos que outro projeto referencie a nossa cópia local desse módulo.
+        São 2 fases para ocorrer uma ligação entre pacotes, a primeira, é a
+        criação da ligação, primeiramente precisamos ir até o diretório do
+        projeto em que queremos que se torne ligável, e digitar "npm link".
+      </p>
+      <h4 class="d-flex justify-content-center">
+        <b
+          >$ cd xpto <br />
+          $ npm link
+        </b>
+      </h4>
+      <p class="text-justify fs-5">
+        A segunda fase da ligação de módulos é referenciar realmente a ligação,
+        é parecido à instalação de um pacote. Agora, nós nos mudamos até o
+        diretório que vai importar o módulo ligado, e digitamos mais uma vez o
+        "npm link", só que agora precisamos escrever o nome do módulo ligado,
+        desse jeito:
+      </p>
+      <h4 class="d-flex justify-content-center">
+        <b
+          >$ cd teste <br />
+          $ npm link xpto</b
+        >
+      </h4>
+      <p class="text-justify fs-5">
+        Para fazermos alguma remoção de módulos ligados, é do mesmo jeito, só
+        que agora trocamos o "npm link" pelo "npm unlink". <br />
+        Quando quisermos atualizar algum pacote, utilizamos o comando
+        <b>npm update</b>. <br />
+        E para desinstalar pacotes, podemos usar tanto o <b>npm uninstall</b>,
+        quanto o <b>npm rm</b>, seguido do nome do pacote que queremos remover.
+      </p>
+
+      <br />
+      <h1>A função require()</h1>
+      <hr />
+      <a class="navbar-brand d-flex justify-content-center" href="#">
+        <img
+          src="../assets/images/require.png"
+          width="90%"
+          height="90%"
+          class="d-inline-block align-text-top"
+        />
+      </a>
+      <br />
+      <p class="text-justify fs-5">
+        Para gerenciar os pacotes do Node é utilizado o NPM. Porém, para
+        importarmos módulos para os nossos programas, nós utilizamos uma função
+        chamada
+        <b>require()</b>! <br />
+        Esta função utiliza um único argumento: Uma string que especifique o
+        módulo que vai ser carregado. <br />
+        Se o caminho para o módulo específicado existir, a função require() vai
+        retornar um objeto que pode ser utilizado para conectar com o módulo, se
+        o módulo nao for encontrado, vai ser emitida uma excessão. Este é um
+        exemplo com o módulo commander, retirado da página 17 do livro:
+      </p>
+      <h4 class="d-flex justify-content-center">
+        <b> var commander = require("commander")</b>
+      </h4>
+      <br />
+      <h2>Módulos Centrais e Módulos de Arquivo</h2>
+      <hr />
+      <p class="text-justify fs-5">
+        <b>Módulos Centrais</b> são módulos compilados no binário do Node. Esses
+        módulos recebem a maior prioridade fornecida por <b>require()</b>,
+        signifcando que , caso houver um confito de nomes entre os módulos, o
+        módulo central será carregado.
+      </p>
+      <p>
+        Um exemplo é o Node ter um módulo central chamado <b>HTTP</b>, que
+        fornece funcionalidades para trabalho com o HTTP. Uma chamada
+        <b>require("http")</b> sempre vai carregar o módulo central http.
+      </p>
+      <p class="text-justify fs-5">
+        <b>Módulos de Arquivo</b> são módulos não centrais carregados a partir
+        do sistema de arquivos. Podem ser especificados usando os caminhos
+        absolutos, relativos ou pelo diretório <i>node_modules</i>. Os nomes de
+        módulos que são tratados como caminhos absolutos, começam com uma barra
+        ("/"), como mostra neste exemplo do livro:
+      </p>
+      <h4 class="d-flex justify-content-center">
+        <b> require ("/some/path/foo");</b>
+      </h4>
+      <p class="text-justify fs-5">
+        Se o caminho de um módulo não for relacionado à um módulo central, ou a
+        um caminho absoluto ou relativo, o Node começa a buscar nas pastas de
+        node_modules. <br />
+        Quando a função require() não encontra uma correspondencia exata, ela
+        adiciona extensões como <b>.js, .json e .node</b>. Se mesmo assim o Node
+        não conseguir encontrar uma correspondência, uma mensagem de erro é
+        emitida.
+      </p>
+
+      <br />
+      <h1>O arquivo package.json</h1>
+      <hr />
+      <a class="navbar-brand d-flex justify-content-center" href="#">
+        <img
+          src="../assets/images/packagejson.png"
+          width="30%"
+          height="30%"
+          class="d-inline-block align-text-top"
+        />
+      </a>
+      <br />
+      <p class="text-justify fs-5">
+        Toda a informação relevante do nosso projeto precisa estar armazenada
+        dentro de um arquivo de configuração conhecido como "package.json", que
+        deve estar no diretório raiz de nosso projeto. Conforme indica a sua
+        extensão, esse arquivo deve conter dados JSON válidos. Sem um
+        package.json, nosso código fica inacessível ao npm. Os dados JSON neste
+        arquivo aderem a um esquema. Devemos especificar um nome e uma versão a
+        nosso pacote. O nome deve identificar nosso pacote unicamente no
+        registro do NPM. Quando utilizamos o NPM, o nome se torna parte de um
+        URL , de um argumento de linha de comandos e de um nome de diretório.
+        Sendo assim, esses nomes não podem começar com um ponto, um sublinhado
+        ou qualquer outro tipo de caractere que não seja seguro para URLs. Outra
+        dica é utilizar nomes curtos, descritivos e que não contenham as
+        palavras <b>js</b> e <b>node</b>, implícitamente.
+      </p>
+      <br />
+      <p class="text-justify fs-5">
+        O campo <i>description</i> serve para escrevermos uma breve descrição
+        textual de nosso pacote. NO campo <i>keywords</i> é onde fornecemos
+        algumas palavras-chave para descrevermos melhor o nosso pacote. Essas
+        palavras-chave podem ser buscadas pelo comando <b>search</b> do NPM.
+      </p>
+      <a class="navbar-brand d-flex justify-content-center" href="#">
+        <img
+          src="../assets/images/package2.png"
+          width="40%"
+          height="40%"
+          class="
+            d-inline-block
+            align-text-top
+            border border-danger border border-4
+          "
+        />
+      </a>
+      <h6 class="navbar-brand d-flex justify-content-center">
+        Figura 2: package.json
+      </h6>
+      <br />
+      <p class="text-justify fs-5">
+        No campo <i>author</i> é especificado o nome de apenas o autor do
+        projeto, se houverem outros contribuintes, eles podem ser especificados
+        em um segundo campo, o <i> contributors</i>.
+      </p>
+      <br />
+      <h2>Dependências</h2>
+      <hr />
+      <p class="text-justify fs-5">
+        As <b>dependências do pacote</b> são especificadas no campo
+        <i>dependencies</i> dentro do package.json, esse campo é um objeto que
+        mapeia nomes de pacotes para strings de versão, essa string pode ser
+        qualquer expressão de versão entendida pelo NPM. <br />
+        Uma dica para atualizarmos automaticamente o campo
+        <i>dependencies</i> conforme instalamos novos pacotes, é utilizar o
+        sinalizador <b>--save</b> junto ao comando <i>npm install</i>. <br />
+        Ex: "npm install xpto --save" <br />
+      </p>
+      <br />
+      <h2>Scripts</h2>
+      <hr />
+      <p class="text-justify fs-5">
+        Esse campo contém um mapeamento de comandos npm para comandos de script.
+        Esses comandos, que podem ser quaisquer comandos executáveis, são
+        rodados num processo de shell externo. <br />
+        OS 2 comandos mais utilizados sao o <b>start</b>( inicia o app ) e o
+        <b>test</b>( roda um ou mais scripts de teste de nosso aplicativo), Veja
+        um exemplo, retirado do livro, na página 25: <br />
+        <br />
+        <b
+          >"scripts": { <br />
+          "start": "node server.js", <br />
+          "test": "echo \"Error: no test specified\" && exit 1" <br />
+          }</b
+        >
+        <br />
+        Para executar os comandos <i>start</i> e <i>test</i>, precisamos passar
+        o nome do comando para o NPM. Se o NPM tratar um código de saída
+        diferente de zero, ele trata como um erro, e aborta o comando.
+      </p>
+      <br />
+      <h2>Como gerar um Arquivo package.json ?</h2>
+      <hr />
+      <p class="text-justify fs-5">
+        Para ajudar a resolver diversos problemas, e deixar menos entediante e
+        difìcil, o Node nos oferece o <b>npm init</b> , um assistente de linha
+        de comandos que cria automaticamente um package.json para nós. Se o
+        package.json ja existir, o npm init apenas adiciona informações novas ao
+        arquivo.
+      </p>
+      <br />
+      <h2>O objeto module</h2>
+      <hr />
+      <p class="text-justify fs-5">
+        Por fim, o Node oferece uma variável livre "module", em todo arquivo,
+        ela representa o módulo atual. Esse <i>module</i> é um objeto que contém
+        uma propriedade conhecida como <b>exports</b>, cujo valor é um objeto
+        vazio. O valor de exports é retornado pela função require(), definindo
+        assim, a interface pública de um módulo. O objeto module oferece várias
+        outras propriedades, que não sao comumente utilizadas, como o id, o
+        filename, o loaded e o children.
+      </p>
+      <br />
+      <h2>Publicando no NPM</h2>
+      <hr />
+      <p class="text-justify fs-5">
+        Para publicarmos nossos módulos no NPM, precisamos criar uma conta de
+        usuário no NPM. DEppois de criada a conta, podemos acessar os nossos
+        módulos públicos pelo endereço "https ://npmjs.org/~nome-do-usuario".
+        <br />
+        Depois de configurarmos a nossa conta no NPM, temos que criar um arquivo
+        package.json para nosso módulo. No fim, digitamos o comando
+        <b>npm publish</b> para criar uma entrada no NPM baseada em nosso
+        arquivo package.json.
+      </p>
+      <br />
+      <hr>
+      <br>
+      <h3>
+        Em resumo, boa parte do desenvlvimento de aplicativos Node é trabalhar
+        com <b>npm</b> e pacotes de terceiros. Aqui não foi abordado todo o
+        sistema de pacotes, mas sim, o suficiente para podermos trabalhar com
+        Node.
+      </h3>
     </div>
   </div>
 </template>
