@@ -11,10 +11,15 @@
             <div class="col d-flex align-items-center" id="img">
               <a class="navbar-brand" href="">
                 <img
-                  src="../assets/images/eu.jpg"
+                  src="../assets/images/livro.jpg"
                   width="300"
                   height="300"
-                  class="d-inline-block align-text-top border border-warning rounded-circle"
+                  class="
+                    d-inline-block
+                    align-text-top
+                    border border-warning
+                    rounded-circle
+                  "
                 />
               </a>
             </div>
@@ -22,20 +27,24 @@
               <div class="container2">
                 <div class="about">
                   <p class="text-justify fs-5">
-                    Este Blog foi criado por mim com o objetico de poder testar meus conhecimentos com HTML, e CSS 
-                    além de ter um lugar para poder postar alguns resumos feitos por mim de capítulos do livro "ProNodeJS"
-                    Aqui será submetido o fichamento de um capitulo deste livro a cada 15 dias. Valerá como nota teórica. 
-                    Existem diversas plataformas gratuitas para postar, mas resolvi criar este Blog para ir concatenando meus artigos.
-                    Aqui aos poucos irei utilizando o que aprendi em WebDesign usando HTML, CSS e JavaScript e o Bootstrap.
-                    Este projeto está sendo submetido no Surge e no GitHub.
+                    Este Blog foi criado por mim com o objetivo de poder testar
+                    meus conhecimentos em HTML, e CSS além de ter um lugar para
+                    poder postar alguns resumos feitos de capítulos do livro
+                    "ProNodeJS" Aqui será submetido o fichamento de um capitulo
+                    deste livro a cada 15 dias. Valerá como nota teórica.
+                    Existem diversas plataformas gratuitas para postar, mas
+                    resolvi criar este Blog para ir concatenando meus artigos.
+                    Aqui aos poucos irei utilizando o que aprendi em WebDesign
+                    usando HTML, CSS e JavaScript e o Bootstrap. Este projeto
+                    está sendo submetido no Surge e no GitHub.
                   </p>
                 </div>
               </div>
-            </div>          
+            </div>
           </div>
         </div>
       </div>
-      <hr>
+      <hr />
     </div>
   </div>
 

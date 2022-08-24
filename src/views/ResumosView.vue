@@ -12,7 +12,7 @@
             <div class="col d-flex align-items-center" id="img">
               <a class="navbar-brand">
                 <img
-                  src="../assets/images/node.png"
+                  src="../assets/images/imgcap2.jpeg"
                   width="70%"
                   height="70%"
                   class="d-inline-block align-text-top"
@@ -25,11 +25,18 @@
                   <p class="text-justify">
                     <b> Resumo #1 - Capitulo 2 - O Sistema de Módulos de Node </b> 
                   </p>
-                  <button type="button" class="btn btn-link">
-                  <a href="#" class=""  >
-                    <router-link to="/sistemas-modulos-node"> Ver Mais </router-link>
+                  <h6>
+                    Nós podemos resolver muitos problemas mais complexos
+                    utilizando a funcionalidade central do Node. Mas, um dos
+                    melhores pontos do Node fica em sua grande comunidade de
+                    desenvolvedores e a extensa quantidade de módulos de
+                    terceiros. Quem lida com todos estes módulos é o...
+                  </h6>
+                    <a href="#" class="">
+                    <router-link to="/sistemas-modulos-node">
+                      Continuar lendo
+                    </router-link>
                   </a>
-                  </button>
 
                 </div>
               </div>
@@ -39,11 +46,11 @@
         <hr />
         <div class="container pt-3">
           <div class="row">
-            <p class="text-danger">24/08/2022</p>
+            <p class="text-success">24/08/2022</p>
             <div class="col d-flex align-items-center" id="img">
               <a class="navbar-brand">
                 <img
-                  src="../assets/images/node.png"
+                  src="../assets/images/imgcap3.jpeg"
                   width="70%"
                   height="70%"
                   class="d-inline-block align-text-top"
@@ -54,8 +61,20 @@
               <div class="container2">
                 <div class="about">
                   <p class="text-justify">
-                    Resumo #2 - Capítulo 3 - O módulo Async
+                    <b> Resumo #2 - Capítulo 3 - O módulo Async </b>
                   </p>
+                   <h6>
+                    Nós podemos resolver muitos problemas mais complexos
+                    utilizando a funcionalidade central do Node. Mas, um dos
+                    melhores pontos do Node fica em sua grande comunidade de
+                    desenvolvedores e a extensa quantidade de módulos de
+                    terceiros. Quem lida com todos estes módulos é o...
+                  </h6>
+                  <a href="#" class="">
+                    <router-link to="/modulo-async">
+                      Continuar lendo
+                    </router-link>
+                  </a>
                 </div>
               </div>
             </div>

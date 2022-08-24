@@ -4,7 +4,7 @@
       <div class="container">
         <br />
         <h1>Capítulo 2 - O Sistema de Módulos de Node</h1>
-        <span> Páginas 11 - 33</span>
+        <span> Pro Node.js para desenvolvedores </span>
         <br />
         <hr />
         <a class="navbar-brand d-flex justify-content-center" href="#">

@@ -3,13 +3,12 @@
     <div class="container-fluid">
       <a class="navbar-brand">
         <img
-          src="../assets/images/logo.png"
+          src="../assets/images/img-logo.png"
           alt=""
-          width="100"
-          height="100"
+          width="150"
+          height="150"
           class="d-inline-block align-text-top"
-        />
-      <h6> > Pro Node.js </h6>        
+        />     
       </a>
         <li class="nav">
           <a class="nav-link active" aria-current="page" href="#">

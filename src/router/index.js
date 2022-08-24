@@ -34,7 +34,7 @@ const routes = [
     component: ResuUmView
   },
   {
-    path: '/segundo-resumo',
+    path: '/modulo-async',
     name: 'resumo-dois',
     component: ResuDoisView
   },
