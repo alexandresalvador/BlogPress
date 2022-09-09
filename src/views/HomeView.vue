@@ -21,6 +21,7 @@
           <div class="row">
             <h1 class="text-justify">Resumos em destaque</h1>
             <hr />
+            <br />
             <div class="col d-flex justify-content-center" id="img">
               <a class="navbar-brand">
                 <img
@@ -75,11 +76,10 @@
                     <b> Resumo #2 - Capítulo 3 - O módulo Async </b>
                   </p>
                   <h6>
-                    Nós podemos resolver muitos problemas mais complexos
-                    utilizando a funcionalidade central do Node. Mas, um dos
-                    melhores pontos do Node fica em sua grande comunidade de
-                    desenvolvedores e a extensa quantidade de módulos de
-                    terceiros. Quem lida com todos estes módulos é o...
+                    Neste resumo iniciaremos uma exploração do modelo de
+                    programação do Node, o objetivo aqui é falar de forma mais
+                    clara sobre uma boa parte dos conceitos que envolvem
+                    programação assincrona, o Tratamento de Exceções e o...
                   </h6>
 
                   <a href="#" class="">
@@ -108,6 +108,49 @@
                   "
                 />
               </a>
+            </div>
+          </div>
+          <hr />
+          <br />
+          <div class="row">
+            <div class="col d-flex justify-content-center" id="img">
+              <a class="navbar-brand">
+                <img
+                  src="../assets/images/node.png"
+                  width="300"
+                  height="200"
+                  class="
+                    d-inline-block
+                    align-text-top
+                    border
+                    shadow
+                    p-3
+                    mb-5
+                    bg-white
+                    rounded
+                  "
+                />
+              </a>
+            </div>
+            <div class="col d-flex align-items-center">
+              <div class="container2">
+                <div class="about">
+                  <p class="text-justify">
+                    <b> Resumo #3 - Capitulo 4 - Os Emissores de Eventos </b>
+                  </p>
+                  <h6>
+                    No último capítulo foi apresentado como funciona o modelo de
+                    programação orientado á eventos do Node. Aqui, neste resumo,
+                    veremos sobre os Event Emitters ou Emissores de Eventos, que em teoria....
+                  </h6>
+
+                  <a href="#" class="">
+                    <router-link to="/emissores-eventos">
+                      Continuar lendo
+                    </router-link>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -143,10 +186,10 @@
                     Olá, meu nome é Alexandre Salvador, tenho 20 anos, sou
                     estudante de programação, estou cursando Sistemas Para
                     Internet na Faculdade Ielusc, estou no sexto semestre. Ainda
-                    não possuo nenhum emprego na área, apenas estou estudando no
-                    momento. Pretendo me formar na faculdade em 2023. Este blog
-                    será aonde eu publicarei 6 artigos tratando de assuntos
-                    diversos sobre o Node.js. 
+                    não possuo nenhuma experiência na área, apenas estou
+                    estudando no momento. Pretendo me formar na faculdade em
+                    2023. Este blog será aonde eu publicarei 6 artigos tratando
+                    de assuntos diversos sobre o Node.js.
                   </p>
                 </div>
               </div>

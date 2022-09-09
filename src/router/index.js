@@ -39,7 +39,7 @@ const routes = [
     component: ResuDoisView
   },
   {
-    path: '/terceiro-resumo',
+    path: '/emissores-eventos',
     name: 'resumo-tres',
     component: ResuTresView
   },
