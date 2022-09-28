@@ -141,7 +141,8 @@
                   <h6>
                     No último capítulo foi apresentado como funciona o modelo de
                     programação orientado á eventos do Node. Aqui, neste resumo,
-                    veremos sobre os Event Emitters ou Emissores de Eventos, que em teoria....
+                    veremos sobre os Event Emitters ou Emissores de Eventos, que
+                    em teoria....
                   </h6>
 
                   <a href="#" class="">
@@ -151,6 +152,49 @@
                   </a>
                 </div>
               </div>
+            </div>
+          </div>
+          <hr />
+          <br />
+          <div class="row">
+            <div class="col d-flex align-items-center">
+              <div class="container2">
+                <div class="about">
+                  <p class="text-justify">
+                    <b> Resumo #4 - Capítulo 11 - O Protocolo HTTP  </b>
+                  </p>
+                  <h6>
+                    O Protocolo de Transferência de Hipertexto, também conhecido
+                    como HTTP, se dirige a Web, sendo um protocolo sem estado,
+                    baseado em texto e que funciona sobre o...
+                  </h6>
+
+                  <a href="#" class="">
+                    <router-link to="/protocolo-http">
+                      Continuar lendo
+                    </router-link>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex justify-content-center" id="img">
+              <a class="navbar-brand">
+                <img
+                  src="../assets/images/http.jpg"
+                  width="300"
+                  height="200"
+                  class="
+                    d-inline-block
+                    align-text-top
+                    border
+                    shadow
+                    p-3
+                    mb-5
+                    bg-white
+                    rounded
+                  "
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -183,7 +227,7 @@
               <div class="container2">
                 <div class="about">
                   <p class="text-justify fs-5">
-                    Olá, meu nome é Alexandre Salvador, tenho 20 anos, sou
+                    Olá, meu nome é Alexandre Salvador, sou
                     estudante de programação, estou cursando Sistemas Para
                     Internet na Faculdade Ielusc, estou no sexto semestre. Ainda
                     não possuo nenhuma experiência na área, apenas estou

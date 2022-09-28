@@ -117,11 +117,11 @@
         <hr />
         <div class="container pt-3">
           <div class="row">
-            <p class="text-danger">21/09/2022</p>
+            <p class="text-success">21/09/2022</p>
             <div class="col d-flex align-items-center" id="img">
               <a class="navbar-brand">
                 <img
-                  src="../assets/images/node.png"
+                  src="../assets/images/http.jpg"
                   width="70%"
                   height="70%"
                   class="d-inline-block align-text-top"
@@ -131,7 +131,19 @@
             <div class="col d-flex align-items-center">
               <div class="container2">
                 <div class="about">
-                  <p class="text-justify">Resumo #4 - Capítulo 11 - HTTP</p>
+                  <p class="text-justify">
+                    <b> Resumo #4 - Capítulo 11 - Protocolo HTTP </b>
+                  </p>
+                  <h6>
+                    O Protocolo de Transferência de Hipertexto, também conhecido
+                    como HTTP, se dirige a Web, sendo um protocolo sem estado,
+                    baseado em texto e que funciona sobre o...
+                  </h6>
+                  <a href="#" class="">
+                    <router-link to="/protocolo-http">
+                      Continuar lendo
+                    </router-link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -155,7 +167,7 @@
               <div class="container2">
                 <div class="about">
                   <p class="text-justify">
-                    Resumo #5 - Capítulo 12 - A Estrtura Express
+                    Resumo #5 - Capítulo 12 - A Estrutura Express
                   </p>
                 </div>
               </div>

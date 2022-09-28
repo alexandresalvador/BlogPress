@@ -44,7 +44,7 @@ const routes = [
     component: ResuTresView
   },
   {
-    path: '/quarto-resumo',
+    path: '/protocolo-http',
     name: 'resumo-quatro',
     component: ResuQuatroView
   },
