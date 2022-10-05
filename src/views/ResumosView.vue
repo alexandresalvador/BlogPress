@@ -82,11 +82,11 @@
         <hr />
         <div class="container pt-3">
           <div class="row">
-            <p class="text-success">07/09/2022</p>
+            <p class="text-success">14/09/2022</p>
             <div class="col d-flex align-items-center" id="img">
               <a class="navbar-brand">
                 <img
-                  src="../assets/images/node.png"
+                  src="../assets/images/imgcap4.jpeg"
                   width="70%"
                   height="70%"
                   class="d-inline-block align-text-top"
@@ -117,11 +117,11 @@
         <hr />
         <div class="container pt-3">
           <div class="row">
-            <p class="text-success">21/09/2022</p>
+            <p class="text-success">05/10/2022</p>
             <div class="col d-flex align-items-center" id="img">
               <a class="navbar-brand">
                 <img
-                  src="../assets/images/http.jpg"
+                  src="../assets/images/imgcap11.jpeg"
                   width="70%"
                   height="70%"
                   class="d-inline-block align-text-top"
@@ -152,7 +152,7 @@
         <hr />
         <div class="container pt-3">
           <div class="row">
-            <p class="text-danger">05/10/2022</p>
+            <p class="text-danger">12/10/2022</p>
             <div class="col d-flex align-items-center" id="img">
               <a class="navbar-brand">
                 <img
@@ -177,7 +177,7 @@
         <hr />
         <div class="container pt-3">
           <div class="row">
-            <p class="text-danger">19/10/2022</p>
+            <p class="text-danger">26/10/2022</p>
             <div class="col d-flex align-items-center" id="img">
               <a class="navbar-brand">
                 <img

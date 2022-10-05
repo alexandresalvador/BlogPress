@@ -116,7 +116,7 @@
             <div class="col d-flex justify-content-center" id="img">
               <a class="navbar-brand">
                 <img
-                  src="../assets/images/node.png"
+                  src="../assets/images/imgcap4.jpeg"
                   width="300"
                   height="200"
                   class="
@@ -180,7 +180,7 @@
             <div class="col d-flex justify-content-center" id="img">
               <a class="navbar-brand">
                 <img
-                  src="../assets/images/http.jpg"
+                  src="../assets/images/imgcap11.jpeg"
                   width="300"
                   height="200"
                   class="

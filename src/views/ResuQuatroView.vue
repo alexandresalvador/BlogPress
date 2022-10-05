@@ -114,53 +114,108 @@
         requisição, seguido do URL do recurso requisitado. O método de
         requisição é utilizado para especificar a ação a ser realizada na URL
         especificada. <br />
-        Exemplo: Na Figura 3 , uma requisição GET foi realizada para o recurso
-        que esta localizado em "/". O motivo desta requisição se baseia em
-        visualizar o recurso que foi especificado , como poder ver ser foi
-        exibida uma página web dentro de um navegador.
+        Neste exemplo , uma requisição GET foi realizada para o recurso que esta
+        localizado em "/". O motivo desta requisição se baseia em visualizar o
+        recurso que foi especificado , como poder ver ser foi exibida uma página
+        web dentro de um navegador.
       </p>
-      <div class="col" id="img">
-        <a class="navbar-brand d-flex justify-content-center">
-          <img
-            src="../assets/images/ex-event-emitters.png"
-            width="400"
-            height="220"
-            class="
-              d-inline-block
-              align-text-top
-              border border-danger border border-4
-            "
-          />
-        </a>
-        <h6 class="navbar-brand d-flex justify-content-center">
-          <b> Figura 3 </b> : Exemplo.
-        </h6>
-      </div>
+      <p class="h2 d-flex justify-content-center">
+        GET / HTTP/1.1 <br />
+        Host: localhost: 8000 <br />
+      </p>
+      <br />
       <p class="text-justify fs-5">
-        Neste exemplo é considerado que alguma operação de E/S (alguma transação
-        base de dados) foi realizada, criando assim, um novo usuário. Depois de
-        completar esta operação, o emissor de eventos,
-        <b>emitter</b> cria então um novo evento chamado de <i>userAdded</i>, e
-        passa o nome e a senha do usuário.
+        Na primeira linha, a linha de requisição, é especificado o
+        <i>método de requisição, o URL requisitado e o protocolo</i> que esta
+        sendo utilizado. O método de requisição é o <b>GET</b>, o url é o
+        <b>"/"</b> e o protocolo é o <b>HTTP version 1.1</b>. <br />
+        Após a linha de requisição temos uma coleção de
+        <b>cabeçalhos de requisição</b>, muito úteis para parametrizar a
+        requisição, no exemplo apenas o cabeçalho chamado <b>Host</b> esta
+        incluido. Esse cabeçalho é obrigatório no HTTP 1.1, e serve para
+        especificar o nome do domínio e a porta (8000) do servidor que está
+        sendo requisitado. Outro cabeçalho de requisição muito comum é o
+        <b>COOKIE</b>. Apesar de que não foi mostrado no exemplo, dentro de uma
+        requisição também pode haver um "corpo", que serve para passar algumas
+        informações adicionais ao servidor . <br />
+        <br />
+        Outro método de requisição bastante comum, é o <b>POST</b>, que permite
+        que o cliente remeta dados ao servidor, essas requisições Post são
+        usadas geralmente para envios de formulários HTML. <br />
+        Outros métodos de requisição suportados pelo HTTP 1.1 são:
+      </p>
+      <hr />
+      <p class="h5 d-flex justify-content-center">
+        <b>
+          HEAD -- Utilizado para verificar se um recurso existe, sem que seja
+          necessário baixar todo o seu conteúdo. <br />
+          PUT -- Similares a requisição POST, porém, estes são utilizadas para
+          atualizar recursos ja existentes no servidor. <br />
+          DELETE -- Utilizado para apagar um recurso de um servidor. <br />
+          PATCH -- Similar ao PUT, mas é geralmente utilizado para fazer
+          atualizações parciais a um recurso ja existente. Diferentemente de
+          PUT, que deve reenviar todo o recurso, durante uma atualização.
+        </b>
+      </p>
+      <br />
+      <br />
+      <h1>Os códigos de Resposta</h1>
+      <hr />
+      <p class="text-justify fs-5">
+        A linha de status de toda resposta HTTP inclui um código de status
+        numérico, junto de uma frase de descrição. A frase serve apenas para
+        explicar o que acontece, enquanto o código de status é realmente
+        utilizado pelo cliente, e junto dos cabeçahos de resposta, orienta como
+        a resposta deve ser tratada. <br />
+        Esta é uma pequena amostra de alguns Códigos de Status muito comuns:
+      </p>
+      <hr />
+      <p class="h5">
+        - <b>200 OK </b> = Indica que a requisição HTTP foi tratada com sucesso.
+        <br />
+        - <b>201 Created </b> = Indica que a requisição foi realizada, e um novo
+        recurso foi criado no servidor <br />
+        - <b>400 Bad Request </b> = Indica que a requisição foi mal formada e
+        que não pode ser entendida. <br />
+        - <b>401 Unauthorized </b> = O servidor responderá assim se for exigido
+        uma autenticação, e as credencias forem recusadas. <br />
+        - <b>404 Not Found </b> = O servidor não conseguiu localizar a URL
+        solicitada. <br />
+        - <b>500 Internal Server Error </b> = O servidor encontrou algum erro
+        enquanto tentava realizar a requisição.
+      </p>
+      <br />
+      <h2>Cabeçalhos de Resposta</h2>
+      <p class="text-justify fs-5">
+        Estes cabeçalhos, junto dos códigos de status de resposta, são
+        utilizados para interpretar os dados enviados de volta do servidor.
+        <br />
+        Alguns cabeçalhos de reposta mais comuns incluem :
+      </p>
+      <hr />
+      <p class="h5 d-flex justify-content-center">
+        <b>
+          Cache-Control -- Especifica se um recurso pode ser cacheado. <br />
+          Content-Encoding -- Especifica a codificação utilizada nos dados.
+          <br />
+          Content-Lenght -- Especifica o comprimento do corpo da resposta, em
+          bytes. <br />
+          Content-Type -- Esse cabeçalho diz ao cliente como interpretar os
+          dados. <br />
+          Location -- Quando o cliente é redirecionado, o URL alvo é armazenado
+          nesse cabeçalho. <br />
+          Set-Cookie -- Cria um novo cookie no cliente, que futuramente deve ser
+          incluido no cabeçalho "Cookie". <br />
+        </b>
       </p>
       <hr />
       <br />
-      <h2>Escutando Eventos</h2>
-      <p class="text-justify fs-5">
-        No último exemplo (Figura 3), um emissor de eventos foi utilizado para
-        criar um evento. Porém ninguem está o escutando. <br />
-        Dentro do Node, escutadores de eventos são misturados junto aos
-        emissores de eventos, com a utilização dos métodos <b>on( )</b> e
-        <b>addListener( )</b>. Ambos os métodos podem ser utilizados para um
-        substituir o outro. Ambos recebem um nome de evento e uma função
-        tratadora como argumentos. No momento em que um evento do tipo
-        especificado é emitido, as funções tratadoras correspondentes são
-        chamadas. Veja a Figura 4.
-      </p>
+      <h1>O que são os Middleware ?</h1>
+      <hr />
       <div class="col" id="img">
         <a class="navbar-brand d-flex justify-content-center">
           <img
-            src="../assets/images/ex-event-emitters2.png"
+            src="../assets/images/middle.png"
             width="450"
             height="320"
             class="
@@ -171,53 +226,37 @@
           />
         </a>
         <h6 class="navbar-brand d-flex justify-content-center">
-          <b> Figura 4 </b> : Configurando um Escutador de Eventos utilizando ->
-          <b>on( )</b>.
+          <b> Figura 3 </b> : Pequeno exemplo de Middleware.
         </h6>
       </div>
       <br />
       <p class="text-justify fs-5">
-        Neste código acima, vemos que um tratador de evento <i>userAdded</i> é
-        juntado a <b>emitter</b>, por meio do método "on( )"". Logo após, o
-        <b>emitter</b> emite um evento <i>userAdded</i>, que faz com que o
-        tratador seja chamado. A saída deste exemplo é mostrada na figura 5.
+        Implementar todas as funcionalidades de um servidor chega a ser uma
+        árdua tarefa, mesmo com o auxilio dos módulos centrais do Node. A
+        alternativa mais popular para evitarmos extensas linhas de código, é de
+        adotarmos os <b>Middleware</b>! <br />
+        Middleware são funções que processam requisições em um estilo de linha
+        de montagem, ou seja, uma porção de middleware inicialmente processa uma
+        requisição que chega. Esse middleware pode processar a requisição por
+        completo, ou relizar uma operação na requisição, e depois passá-la para
+        outra porção de middleware, para um processamento adicional. <br />
+        Na figura 3, vemos um middleware que não realiza nenhum processamento.
+        Ele recebe 3 argumentos, <b>request, response e next</b>. Request e
+        Response são os mesmos objetos usados para processar requisições que já
+        conhecemos. O <i>NEXT</i> é uma função chamada para invocar a próxima
+        porção de middleware. Podemos incluir o "next( )" dentro de uma sentença
+        <i>return</i> se quisermos assegurar que a execução não irá continuar
+        quando o próximo middleware for completado.
       </p>
-      <div class="col" id="img">
-        <a class="navbar-brand d-flex justify-content-center">
-          <img
-            src="../assets/images/saida-emitter.png"
-            width="280"
-            height="90"
-            class="
-              d-inline-block
-              align-text-top
-              border border-danger border border-4
-            "
-          />
-        </a>
-        <h6 class="navbar-brand d-flex justify-content-center">
-          <b> Figura 5 </b> : A saída da execução do código.
-        </h6>
-      </div>
-      <br />
-      <br />
-      <h1>Os eventos <b> newListener</b></h1>
       <hr />
       <br />
-      <p class="text-justify fs-5">
-        Em todo caso em que um novo tratador de eventos é registrado, o emissor
-        de eventos emite um evento <b>newListener</b>. Este evento é utilizado
-        para detectar novos tratadores de eventos. Geralmente utilizamos esse
-        evento quando precisamos alocar recursos ou realizar alguma ação para
-        cada novo tratador de eventos. <br />
-        Um evento "newListener" é tratado como qualquer outro evento, o tratador
-        aguarda outros 2 argumentos: o nome do evento ( como uma string ) e a
-        função tratadora. Veja a Figura 6.
-      </p>
+      <h1><b>HTTPS</b></h1>
+      <hr />
+      <br />
       <div class="col" id="img">
         <a class="navbar-brand d-flex justify-content-center">
           <img
-            src="../assets/images/newlistener.png"
+            src="../assets/images/https.png"
             width="450"
             height="250"
             class="
@@ -228,27 +267,39 @@
           />
         </a>
         <h6 class="navbar-brand d-flex justify-content-center">
-          <b> Figura 6 </b> : Adicionando um tratador do evento "newListener"
+          Via :<b> HostGator</b>
         </h6>
       </div>
+      <br />
       <p class="text-justify fs-5">
-        Na imagem vemos que um tratador do evento <b>foo</b> é integrado a um
-        emissor de eventos. Enquanto isso acontece, o emissor emite um evento
-        "newListener" , fazendo assim com que o tratador do evento "newListener"
-        seja chamado. <br />
-        É valido lembrar que o evento "newListener" existe ao mesmo tempo em que
-        é criado seus próprios eventos.
+        Por causa do HTTP transmitir dados em um texto puro, isso o faz ser um
+        tanto quanto inseguro na hora em que temos que transmitir dados
+        sensíveis como as informaçoes do cartão de crédito, emails, senhas, e
+        até mensagens de conversas privadas. Para evitarmos problemas com isso,
+        devemos utilizar de um protocolo seguro, por sorte, o HTTP tem um
+        protocolo irmão, o <b> HTTPS</b>, que nada mais é do que o HTTP padrão
+        executado dentro de um canal seguro.
       </p>
-
+      <p class="text-justify fs-5">
+        Sendo mais especifico, o canal é segurado utilizando-se do protocolo
+        <b>SSL/TLS</b>( Camada de Soquete Seguro/ Segurança de Camada de
+        Transporte). Sob esse protocolo, cada cliente e servidor deve ter uma
+        chave criptográfica privada. Para se criar uma chave privada podemos
+        fazer isso utilizando um utilitário gratuito, o "OpenSSL". <br />
+        <br />
+        Dentro do Livro "Pro Node.js para Desenvolvedores" você consegue ter um
+        passo-a-passo de como fazer isso.
+      </p>
       <br />
       <hr />
       <br />
       <h3>
-        Esse terceiro resumo explorou muito bem o conceito dos emissores de
-        evento, explicou um pouco sobre para que serve o objeto EventEmitter,
-        além de mostrar como faz para podermos "escutar" um evento por meio dos
-        métodos emitter.on ou addListener. Além de explicar como funciona para
-        adicionarmos um novo Listener.
+        Em resumo, aqui foi explicado muitas coisas relacionadas ao que da fato
+        se baseava o protocolo HTTP, introduzindo um vasto material, foi
+        essencial para apresentar conceitos que precisam ser entendidos se
+        quisermos trabalhar com HTTP futuramente. Esse capítulo também abordou
+        assuntos interessantes como os códigos de respostas, os middlewares,
+        Cookies e como ter uma maior segurança através do Protocolo HTTPS.
       </h3>
     </div>
   </div>
