@@ -49,7 +49,7 @@ const routes = [
     component: ResuQuatroView
   },
   {
-    path: '/quinto-resumo',
+    path: '/arquivos-node',
     name: 'resumo-cinco',
     component: ResuCincoView
   },

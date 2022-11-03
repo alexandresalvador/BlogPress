@@ -3,9 +3,9 @@
     <div class="container-fluid">
       <a class="navbar-brand">
         <img
-          src="../assets/images/img-logo.png"
+          src="../assets/images/pnw/LOGO-PRO.png"
           alt=""
-          width="150"
+          width="250"
           height="150"
           class="d-inline-block align-text-top"
         />     

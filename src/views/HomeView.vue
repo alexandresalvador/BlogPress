@@ -3,13 +3,13 @@
     <div class="about">
       <div class="container">
         <br />
-        <h1>Bem-Vindo á meu Blog!</h1>
+        <h1>Seja Bem-Vindo!</h1>
         <hr />
         <div class="col d-flex align-items-center" id="img">
           <div class="carousel-item active" id="imagem-wrapper">
             <a class="navbar-brand">
               <img
-                src="../assets/images/imgbanner.jpeg"
+                src="../assets/images/pnw/BANNER-PRO.png"
                 class="d-block w-100"
                 id="imagem"
                 alt="..."
@@ -161,7 +161,7 @@
               <div class="container2">
                 <div class="about">
                   <p class="text-justify">
-                    <b> Resumo #4 - Capítulo 11 - O Protocolo HTTP  </b>
+                    <b> Resumo #4 - Capítulo 11 - O Protocolo HTTP </b>
                   </p>
                   <h6>
                     O Protocolo de Transferência de Hipertexto, também conhecido
@@ -197,6 +197,50 @@
               </a>
             </div>
           </div>
+
+          <hr />
+          <br />
+          <div class="row">
+            <div class="col d-flex justify-content-center" id="img">
+              <a class="navbar-brand">
+                <img
+                  src="../assets/images/cards/imgcap6.png"
+                  width="300"
+                  height="200"
+                  class="
+                    d-inline-block
+                    align-text-top
+                    border
+                    shadow
+                    p-3
+                    mb-5
+                    bg-white
+                    rounded
+                  "
+                />
+              </a>
+            </div>
+            <div class="col d-flex align-items-center">
+              <div class="container2">
+                <div class="about">
+                  <p class="text-justify">
+                    <b> Resumo #5 - Capitulo 6 - O Sistema de Arquivos do Node </b>
+                  </p>
+                  <h6>
+                    Este capítulo promete mostrar como o sistema de arquivos
+                    pode ser outra grande ferramenta no cinto de utilidades do
+                    desenvolvedor Node....
+                  </h6>
+
+                  <a href="#" class="">
+                    <router-link to="/arquivos-node">
+                      Continuar lendo
+                    </router-link>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="container3">
@@ -227,12 +271,12 @@
               <div class="container2">
                 <div class="about">
                   <p class="text-justify fs-5">
-                    Olá, meu nome é Alexandre Salvador, sou
-                    estudante de programação, estou cursando Sistemas Para
-                    Internet na Faculdade Ielusc, estou no sexto semestre. Ainda
-                    não possuo nenhuma experiência na área, apenas estou
-                    estudando no momento. Pretendo me formar na faculdade em
-                    2023. Este blog será aonde eu publicarei 6 artigos tratando
+                    Olá, meu nome é Alexandre Salvador, sou estudante de
+                    programação, estou cursando Sistemas Para Internet na
+                    Faculdade Ielusc, estou no sexto semestre. Ainda não possuo
+                    nenhuma experiência na área, apenas estou estudando no
+                    momento. Pretendo me formar na faculdade em 2023. Este blog
+                    será aonde eu publicarei 5 artigos (por enquanto) tratando
                     de assuntos diversos sobre o Node.js.
                   </p>
                 </div>
@@ -378,7 +422,7 @@ export default {
   width: 600px;
   /* código abaixo centra a imagem ao centro */
   position: absolute;
-  top: 90%;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }

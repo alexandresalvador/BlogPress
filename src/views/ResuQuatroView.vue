@@ -294,8 +294,8 @@
       <hr />
       <br />
       <h3>
-        Em resumo, aqui foi explicado muitas coisas relacionadas ao que da fato
-        se baseava o protocolo HTTP, introduzindo um vasto material, foi
+        Em resumo, aqui foi explicado muitas coisas relacionadas ao que de fato
+        se baseia o protocolo HTTP, introduzindo um vasto material, foi
         essencial para apresentar conceitos que precisam ser entendidos se
         quisermos trabalhar com HTTP futuramente. Esse capítulo também abordou
         assuntos interessantes como os códigos de respostas, os middlewares,

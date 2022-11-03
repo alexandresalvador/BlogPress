@@ -152,7 +152,42 @@
         <hr />
         <div class="container pt-3">
           <div class="row">
-            <p class="text-danger">12/10/2022</p>
+            <p class="text-success">02/11/2022</p>
+            <div class="col d-flex align-items-center" id="img">
+              <a class="navbar-brand">
+                <img
+                  src="../assets/images/cards/imgcap6.png"
+                  width="70%"
+                  height="70%"
+                  class="d-inline-block align-text-top"
+                />
+              </a>
+            </div>
+            <div class="col d-flex align-items-center">
+              <div class="container2">
+                <div class="about">
+                  <p class="text-justify">
+                    <b> Resumo #5 - Capitulo 6 - O Sistema de Arquivos do Node </b>
+                  </p>
+                  <h6>
+                    Este capítulo promete mostrar como o sistema de arquivos
+                    pode ser outra grande ferramenta no cinto de utilidades do
+                    desenvolvedor Node....
+                  </h6>
+                  <a href="#" class="">
+                    <router-link to="/arquivos-node">
+                      Continuar lendo
+                    </router-link>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="container pt-3">
+          <div class="row">
+            <p class="text-danger">Em Breve</p>
             <div class="col d-flex align-items-center" id="img">
               <a class="navbar-brand">
                 <img
@@ -167,7 +202,7 @@
               <div class="container2">
                 <div class="about">
                   <p class="text-justify">
-                    Resumo #5 - Capítulo 12 - A Estrutura Express
+                    Resumo #6 - Capítulo 12 - A Estrutura Express
                   </p>
                 </div>
               </div>
@@ -177,7 +212,7 @@
         <hr />
         <div class="container pt-3">
           <div class="row">
-            <p class="text-danger">26/10/2022</p>
+            <p class="text-danger">Em Breve</p>
             <div class="col d-flex align-items-center" id="img">
               <a class="navbar-brand">
                 <img
@@ -191,7 +226,7 @@
             <div class="col d-flex align-items-center">
               <div class="container2">
                 <div class="about">
-                  <p class="text-justify">Resumo #6 - Capítulo 15 - Testando</p>
+                  <p class="text-justify">Resumo #7 - Capítulo 15 - Testando</p>
                 </div>
               </div>
             </div>
