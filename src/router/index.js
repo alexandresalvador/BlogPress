@@ -53,11 +53,17 @@ const routes = [
     name: 'resumo-cinco',
     component: ResuCincoView
   },
+
   {
     path: '/sexto-resumo',
     name: 'resumo-seis',
     component: ResuSeisView
   },
+  // {
+  //   path: '/setimo-resumo',
+  //   name: 'resumo-sete',
+  //   component: ResuSeisView
+  // },
 ]
 
 const router = new VueRouter({
