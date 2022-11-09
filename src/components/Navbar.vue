@@ -1,14 +1,14 @@
 <template>
   <nav class="navbar bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand">
+      <a class="navbar-brand" href="/">
         <img
           src="../assets/images/pnw/LOGO-PRO.png"
           alt=""
           width="250"
           height="150"
           class="d-inline-block align-text-top"
-        />     
+        />    
       </a>
         <li class="nav">
           <a class="nav-link active" aria-current="page" href="#">
